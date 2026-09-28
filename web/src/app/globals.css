@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Light theme — beige */
+  --bg: 244 238 223;
+  --surface: 255 255 255;
+  --surface-2: 234 224 200;
+  --ink-50: 250 246 236;
+  --ink-100: 240 230 207;
+  --ink-400: 160 143 111;
+  --ink-600: 110 91 66;
+  --ink-800: 61 47 31;
+  --ink-900: 43 33 22;
+  --capacity-green: 22 122 82;
+  --capacity-yellow: 168 106 10;
+  --capacity-red: 184 58 58;
+  --capacity-green-bg: #e3f3ea;
+  --capacity-yellow-bg: #f7ecd6;
+  --capacity-red-bg: #f6e0df;
+}
+
+/* Dark theme — coklat muda (light brown) */
+.dark {
+  --bg: 201 166 113;
+  --surface: 228 201 154;
+  --surface-2: 181 143 92;
+  --ink-50: 241 225 190;
+  --ink-100: 220 192 145;
+  --ink-400: 122 92 57;
+  --ink-600: 91 65 40;
+  --ink-800: 58 40 24;
+  --ink-900: 42 28 15;
+  --capacity-green: 18 110 74;
+  --capacity-yellow: 150 95 9;
+  --capacity-red: 168 53 53;
+  --capacity-green-bg: rgba(255, 255, 255, 0.32);
+  --capacity-yellow-bg: rgba(255, 255, 255, 0.32);
+  --capacity-red-bg: rgba(255, 255, 255, 0.32);
+}
+
+* {
+  border-color: rgb(var(--ink-100));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--ink-900));
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--ink-400) / 0.5);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.glass {
+  backdrop-filter: saturate(180%) blur(16px);
+}

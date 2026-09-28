@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+.env*.local
+npm-debug.log*
+.DS_Store
+
+# Uploaded menu PDFs/photos — served via /api/uploads/menus/[filename], not
+# Next's static `public/` folder (that folder's file list is snapshotted once
+# at server boot, so anything written to it while the server is running
+# 404s until the next restart — see src/app/api/uploads/menus/[filename]/route.ts).
+uploads/
